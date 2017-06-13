@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <!-META-->
+    <meta charset="UTF-8">
+    <title>Flurri | A better way to know what’s happening around you.</title>
+    <meta name="description" content="A.I. powered app that finds local things to do that match your personality and interests.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Flurri | A better way to know what’s happening around you." />
+    <meta property="og:description" content="A.I. powered app that finds local things to do that match your personality and interests." />
+    <meta property="og:image" content="img/open_graph.jpg">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Flurri | A better way to know what’s happening around you." />
+    <meta name="twitter:description" content="A.I. powered app that finds local things to do that match your personality and interests." />
+    <meta name="twitter:image" content="img/open_graph.jpg">
+
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif|Poppins:500">
+    <!--slick-slider-->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <!--FAVICONS-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffed54">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--SCRIPTS------------------------------------------------------------------------------------------------------------------->
+
+    <script src="https://use.fontawesome.com/8002fed4c5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/vegas/vegas.min.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-91639513-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- ===STICKY==HEADER==FUNCTIONS=== -->
+    <!-- HIDE / SHOW -->
+    <!--desktop-->
+    <script>
+        $(document).ready(function(){
+
+             //Hide the navigation bar first
+
+            $(window).scroll(function () {  //Listen for the window's scroll event
+                if (isScrolledAfterElement(".navbar-emerge")) { //if it has scrolled beyond the #content element
+                    $('.sticky-navbar').fadeIn();  //Show the navigation bar
+                } else {
+                    $('.sticky-navbar').fadeOut(); //Else hide it
+                }
+            });
+
+            //Function that returns true if the window has scrolled beyond the given element
+            function isScrolledAfterElement(elem) {
+                var $elem = $(elem);
+                var $window = $(window);
+
+                var docViewTop = $window.scrollTop();
+                var docViewBottom = docViewTop + $window.height();
+
+                var elemTop = $elem.offset().top;
+
+                return elemTop <= docViewBottom && $(".navbar-die").offset().top > docViewBottom;
+            }
+        });
+    </script>
+    <!--mobile-->
+    <!--<script>
+        $(document).ready(function(){
+
+            $('#sticky-header-mobile').fadeOut();//Hide the navigation bar first
+
+            $(window).scroll(function () {  //Listen for the window's scroll event
+                if (isScrolledAfterElement(".navbar-emerge-m")) { //if it has scrolled beyond the #content element
+                    $('#sticky-header-mobile').fadeIn(001);  //Show the navigation bar
+                } else {
+                    $('#sticky-header-mobile').fadeOut(001
+                    ); //Else hide it
+                }
+            });
+
+            //Function that returns true if the window has scrolled beyond the given element
+            function isScrolledAfterElement(elem) {
+                var $elem = $(elem);
+                var $window = $(window);
+
+                var docViewTop = $window.scrollTop();
+                var docViewBottom = docViewTop + $window.height();
+
+                var elemTop = $elem.offset().top;
+
+                return elemTop <= docViewTop && $(".navbar-die-m").offset().top > docViewTop;
+            }
+        });
+    </script>-->
+
+    <!-- COLOR CHANGE -->
+    <script>
+        $(document).ready(function() {
+            $('#get-it-first-desktop').fadeOut();
+
+            $(window).scroll(function () {
+                if (IsScrolledAfterElement2(".color-change")) {
+                    $('#sticky-header-desktop').css("background-color", "white");
+                    $('#get-it-first-desktop').fadeIn();
+
+                } else if (IsScrolledAfterElement3(".color-change")) {
+                    $('#sticky-header-desktop').css("background-color", 'rgba(255,255,255,0.01)');
+                    $('#get-it-first-desktop').fadeOut();
+                }
+            });
+
+            function IsScrolledAfterElement2(elem) {
+                var $elem = $(elem);
+                var $window = $(window);
+
+                var docViewTop = $window.scrollTop();
+                var docViewBottom = docViewTop + $window.height();
+
+                return 1100 <= docViewBottom;
+
+            }
+
+            function IsScrolledAfterElement3(elem) {
+                var $elem = $(elem);
+                var $window = $(window);
+
+                var docViewTop = $window.scrollTop();
+                var docViewBottom = docViewTop + $window.height();
+
+                return 1100 > docViewBottom;
+
+            }
+        });
+    </script>
+
+    <!-- ===LOADER==FUNCTION=== -->
+
+    <script type="text/javascript">
+        $(window).on("load" ,function() {
+            $(".loader").fadeOut();
+        })
+    </script>
+
+
+</head>
+
+
+
+<body>
+
+<div class="loader">
+    <img src="img/logo-loader.png" id="logo-loader-image">
+</div>
+
+<!-- ===VIRAL==LOOPS==FUNCTION== -->
+
+<script>!function(a,b,c,d,t){var e,f=a.getElementsByTagName("head")[0];if(!a.getElementById(c)){if(e=a.createElement(b),e.id=c,e.setAttribute("data-vrlps-ucid",d),e.setAttribute("data-vrlps-version","2"), e.setAttribute("data-vrlps-template", t),e.src="https://app.viral-loops.com/popup_assets/js/vl_load_v2.min.js",window.ub){jQuery=null,$=null;var g=a.createElement(b);g.src="https://code.jquery.com/jquery-2.2.4.min.js",f.appendChild(g)}f.appendChild(e);var h=a.createElement("link");h.rel="stylesheet",h.type="text/css",h.href="https://app.viral-loops.com/static/vl-loader.css",f.appendChild(h);var i=a.createElement("div");i.id="vl-overlay",i.style.display="none";var j=a.createElement("div");j.id="vl-loader",i.appendChild(j),a.addEventListener("DOMContentLoaded",function(b){a.body.appendChild(i);for(var c=a.getElementsByClassName("vrlps-trigger"),d=0;d<c.length;d++)c[d].removeAttribute("href"),c[d].onclick=function(){a.getElementById("vl-overlay").style.display="block"};var e=a.querySelectorAll("[data-vl-widget='popupTrigger']");[].forEach.call(e,function(b){var c=a.createElement("div");c.className="vl-embedded-cta-loader",b.appendChild(c)})})}}(document,"script","vrlps-js","-5XzQmyHw9EHsJWbbNU4Ex-zNnU","waitlist");</script>
+
+
+<!-- ==== S T I C K Y == H E A D E R ==== -->
+
+<!-- M O B I L E -->
+<!--<div class="sticky-header container text-center" id="sticky-header-mobile">
+    <div data-vl-widget="popupTrigger" id="signup-btn-mobile"><h2>Get the app first</h2></div>
+</div>-->
+
+<!-- D E S K T O P -->
+
+<div class="sticky-header no-margin-desktop desktop-media sticky-navbar" id="sticky-header-desktop">
+    <div class="row">
+
+        <div class="col-sm-6" id="navbar-message">
+            <img src="img/Logogo.png" id="logo-navbar-desktop">
+        </div>
+
+        <div class="col-sm-4 beta-columns-navabar-desktop">
+            <h3 id="get-it-first-desktop">Get the app first</h3>
+        </div>
+        <div class="col-sm-2 beta-columns-navabar-desktop">
+            <div data-vl-widget="popupTrigger" id="waitlist-btn-desktop"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ==== H  E  R  O === U  N  I  T ==== -->
+
+<div class="navbar-emerge"></div>
+<!-- M O B I L E -->
+
+<div class="container-fluid mobile-fonts mobile-media text-center" id="hero-unit-mobile">
+
+      <div id="darken-mobile" class="center">
+       <img src="img/Logogo.png" id="hero-logo-mobile">
+          <div class="center mobile-media" id="video-desktop-section">
+              <div class="center text-center" id="phone-desktop">
+                  <div id="speaker-phone-desktop"></div>
+                  <video autoplay="" loop="" muted="" poster="static/video.jpg" id="video-desktop">
+                      <source src="static/video.mp4" type="video/mp4">
+                  </video>
+
+                  <div class="circle" id="home-btn-phone-desktop"></div>
+              </div>
+          </div>
+      </div>
+
+
+</div>
+<div class="mobile-media container text-center navbar-emerge-m" id="CTA-mobile-top">
+    <div data-vl-widget="popupTrigger" id="signup-btn-mobile"><h2>Get the app first</h2></div>
+</div>
+
+<!-- D E S K T O P -->
+
+<div class="container-fluid desktop-fonts desktop-media" id="hero-unit-desktop">
+
+    <div class="desktop-media text-center center" id="hero-unit-content-desktop">
+
+       <div id="darken-desktop">
+           <div class="center desktop-media" id="video-desktop-section">
+               <div class="center text-center" id="phone-desktop">
+                   <div id="speaker-phone-desktop"></div>
+                   <video autoplay="" loop="" muted="" poster="static/video.jpg" id="video-desktop">
+                       <source src="static/video.mp4" type="video/mp4">
+                   </video>
+
+                   <div class="circle" id="home-btn-phone-desktop"></div>
+               </div>
+           </div>
+       </div>
+
+    </div>
+
+</div>
+
+<!-- ==== F E A T U R E S === U  N  I  T ==== -->
+<!-- M O B I L E -->
+<div class="mobile-media text-center container-fluid mobile-fonts padding-top-bottom " id="feature-2-mobile">
+
+    <div class="mobile-media padding-top-bottom-small">
+        <h1>Everything in one place</h1>
+    </div>
+
+    <div class="container mobile-media padding-top-bottom-small">
+
+        <div class="slick-slides">
+            <div class="slick-slide-desktop"><img src="img/ssd1.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd2.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd3.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd4.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd5.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd6.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd7.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd8.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd9.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd10.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd11.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd12.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd13.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd14.jpg"></div>
+        </div>
+
+    </div>
+    <div class="container text-center">
+        <div id="many-events-div-mobile">
+            <h1 id="many-events">
+                3000+ activities
+            </h1>
+        </div>
+        <div class="padding-top-bottom-small">
+            <p>Per month in San Francisco<br>And counting!</p>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- M O B I L E -->
+<div class="mobile-media text-center container-fluid mobile-fonts padding-top-bottom" id="feature-1-mobile">
+
+    <div class="mobile-media padding-top-bottom-small">
+
+        <div class="text-center">
+            <h1>No more guessing</h1>
+        </div>
+
+        <div class="mobile-media, text-center" id="feature-1-text-mobile">
+            <p>
+                Our suite of machine
+                learning algorithms sort through thousands of options to find the activities that match your preferences.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="mobile-media padding-top-bottom-small" id="feature-1-image-mobile">
+        <img src="img/feature-1.jpg">
+    </div>
+
+
+</div>
+
+<div class="mobile-media text-center container-fluid mobile-fonts padding-top-bottom color-change" id="feature-1_2-mobile">
+
+    <div class="mobile-media padding-top-bottom-small">
+        <h1>
+            Gets better every time
+        </h1>
+        <p>
+            The more you use the app, the better the recommendations!
+        </p>
+        <!--<p>Flurri is the only app that accounts for your unique personality.</p>-->
+
+    </div>
+
+    <div class="mobile-media padding-top-bottom-small" id="feature-1_2-image-mobile">
+        <img src="img/feature-1.2.jpg">
+    </div>
+
+</div>
+
+
+<!-- D E S K T O P -->
+<div class="desktop-media desktop-fonts padding-top-bottom-small no-margin-desktop" id="feature-2-desktop">
+    <div class="container text-center" id="everything-desktop">
+        <h1>Everything in one place</h1>
+    </div>
+    <div class="container">
+        <div class="slick-slides">
+            <div class="slick-slide-desktop"><img src="img/ssd1.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd2.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd3.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd4.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd5.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd6.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd7.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd8.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd9.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd10.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd11.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd12.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd13.jpg"></div>
+            <div class="slick-slide-desktop"><img src="img/ssd14.jpg"></div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div id="many-events-div">
+            <h1 id="many-events">
+                3000+ activities / month
+            </h1>
+        </div>
+        <p>In San Francisco<br>And counting!</p>
+
+    </div>
+</div>
+
+<!-- D E S K T O P -->
+<div class="desktop-media desktop-fonts padding-top-bottom-small no-margin-desktop" id="feature-1-desktop">
+    <div class="text-center">
+       <h1>No more guessing</h1>
+    </div>
+    <div class="row no-margin-desktop">
+        <div class="col-md-6 text-center">
+            <img src="img/feature-1.jpg" id="feature-1-image-desktop">
+            <h2>
+                Only activities that suit you
+            </h2>
+            <p>
+                Our suite of machine learning algorithms<br>
+                sort through thousands of options to find<br> the activities that match your preferences.
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="img/feature-1.2.jpg" id="feature-1_2-image-desktop">
+
+
+            <h2>
+                Gets better every time
+            </h2>
+            <p>
+                The more you use the app,<br> the better the recommendations!
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+<!-- M O B I L E -->
+
+<!-- D E S K T O P -->
+
+<div class="desktop-media desktop-fonts padding-top-bottom-small no-margin-desktop" id="feature-3-desktop">
+
+        <img src="img/logo-small.png" id="feature-3-image-desktop">
+
+    <div class="text-center" id="feature-3-desktop-header">
+        <h1>It all adds up</h1>
+        <p>To the ultimate one-stop app for going out</p>
+    </div>
+    <div class="row no-margin-desktop">
+        <div class="col-md-4">
+            <img src="img/feature-3.jpg" class="feature-3-image-desktop padding-top-bottom-small">
+            <div class="text-feature-3-desktop text-center">
+                <p>No searching,<br>
+                    just pick the occasion.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="img/feature-4.jpg" class="feature-3-image-desktop padding-top-bottom-small">
+            <div class="text-feature-3-desktop text-center">
+                <p>Discovery is fun<br>and easy, as it should be.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="img/feature-5.jpg" class="feature-3-image-desktop padding-top-bottom-small">
+            <div class="text-feature-3-desktop text-center">
+                <p>Easily compare,<br>
+                    make lists, and get ready to have fun!</p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<!-- ==== M O R E - F E A T U R E S === U  N  I  T ==== -->
+
+<!-- M O B I L E -->
+
+<div class="mobile-media text-center container-fluid mobile-fonts padding-top-bottom " id="feature-3-mobile">
+
+    <div class="mobile-media padding-top-bottom-small">
+        <h1>It all adds up</h1>
+        <p>To the ultimate one-stop app for going out</p>
+    </div>
+
+    <div class=" container mobile-media padding-top-bottom-small">
+
+        <div class="slick-slides">
+            <div class="slick-slide-mobile">
+                <img src="img/feature-3.jpg" class="padding-top-bottom-small">
+                <div class="text-center">
+                    <p>No searching,<br>
+                        just pick the occasion.</p>
+                </div>
+            </div>
+            <div class="slick-slide-mobile">
+                <img src="img/feature-4.jpg" class="padding-top-bottom-small">
+                <div class="text-center">
+                    <p>Discovery is fun<br>and easy, as it should be.</p>
+                </div>
+            </div>
+            <div class="slick-slide-mobile">
+                <img src="img/feature-5.jpg" class="padding-top-bottom-small">
+                <div class="text-center">
+                    <p>Easily compare,<br>
+                    make lists, and get ready to have fun!</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- D E S K T O P -->
+
+<div class="desktop-media row desktop-fonts no-margin-desktop text-center " id="extra-features-desktop">
+
+</div>
+
+<!-- ==== B E T A - I N V I T E === U  N  I  T ==== -->
+<div class="navbar-die"></div>
+<!-- M O B I L E -->
+<div class="mobile-media text-center container-fluid mobile-fonts padding-top-bottom" id="beta-invite-mobile">
+
+    <div class="container-fluid" id="beta-invite-content-mobile">
+        <h2>GET THE APP FIRST<br>The number of spots is limited.</h2>
+        <div data-vl-widget="popupTrigger"></div>
+    </div>
+
+
+</div>
+
+<!-- D E S K T O P -->
+
+<div class="desktop-fonts desktop-media text-center no-margin-desktop" id="beta-invite-desktop">
+    <div class="container-fluid" id="beta-invite-content-desktop">
+        <h2>GET THE APP FIRST</h2>
+        <h3>The number of spots is limited,<br>
+            because we want to maintain a high service quality for our users.</h3>
+        <div data-vl-widget="popupTrigger"></div>
+    </div>
+
+
+</div>
+
+<!-- ==== S T A T E M E N T === U  N  I  T ==== -->
+<!-- M O B I L E -->
+<div class="mobile-media text-center container-fluid mobile-fonts padding-top-bottom" id="statement-mobile">
+
+    <div id="statement-p-mobile">
+        <p>
+            <b>We believe that there is a perfect activity for everyone out there, at any given moment in time.
+                Our mission is to find it.</b>
+        </p>
+    </div>
+
+</div>
+<!-- D E S K T O P -->
+<div class="desktop-fonts desktop-media text-center no-margin-desktop" id="statement-desktop">
+    <p>
+        <b>We believe that there is a perfect activity for everyone out there, at any given moment in time.
+            Our mission is to find it.</b><br>
+        - Flurri Team
+    </p>
+
+</div>
+
+<!-- ==== F O O T E R === U  N  I  T ==== -->
+
+<!-- M O B I L E -->
+
+<div class="mobile-fonts mobile-media text-center no-margin-desktop" id="footer-mobile">
+    <div id="socialmedia-footer-mobile">
+
+    </div>
+    <div id="links-footer-mobile">
+        <a href="">Privacy policy</a>
+    </div>
+
+
+</div>
+
+<!-- D E S K T O P -->
+<div class="desktop-fonts desktop-media text-center no-margin-desktop" id="footer-desktop">
+    <div id="socialmedia-footer-desktop">
+
+    </div>
+    <div id="links-footer-desktop">
+        <a href="privacypolicy.htm">Privacy policy</a>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.slick-slides').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: '20px',
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: '10px',
+                        autoplay: true,
+                        autoplaySpeed: 2000,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+    });
+    });
+</script>
+
+</body>
+</html>

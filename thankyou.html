@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/thankyou.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/vegas/vegas.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif|Poppins:500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/vegas/vegas.min.js"></script>
+</head>
+
+<body>
+<!--S L I D E S H O W-->
+<script>
+    $(".testslide, body").vegas({
+        delay: 7000,
+        timer: false,
+        shuffle: true,
+        transition: 'fade',
+        transitionDuration: 2000,
+        slides: [
+            { src: 'img/s1.jpg' },
+            { src: 'img/s2.jpg' },
+            { src: 'img/s3.jpg' },
+            { src: 'img/s4.jpg' },
+            { src: 'img/s5.jpg' },
+            { src: 'img/s6.jpg' },
+            { src: 'img/s7.jpg' },
+            { src: 'img/s8.jpg' }
+        ],
+
+        overlay: 'js/vegas/overlays/02.png'
+    });
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=255944678192059";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!--M O B I L E-->
+<div class="mobile-media mobile-fonts text-center" id="thank-you-message-mobile">
+    <img src="img/logo-small.png" id="logo-mobile">
+    <h1>Almost finished!</h1>
+    <h2>Please click the link in the <b>email</b> we just sent you, to complete the process!</h2>
+    <p>Share Flurri with your friends!</p>
+    <div class="fb-share-button" data-href="https://flurri.ai?utm_source=facebook&amp;utm_medium=shared_tnkupage" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fflurri.ai%2F%3Futm_source%3Dfacebook%26utm_medium%3Dshared_tnkupage&amp;src=sdkpreparse">Share</a>
+    </div>
+</div>
+
+<!--D E S K T O P-->
+<div class="desktop-media desktop-fonts text-center text-margins-high" id="thank-you-message-desktop">
+    <img src="img/logo-small.png" id="logo-desktop">
+    <h1>Almost finished!</h1>
+    <h2>Please click the link in the <b>email</b> we just sent you, to complete the process!</h2>
+    <p>Share Flurri with your friends!</p>
+    <div class="fb-share-button" data-href="https://flurri.ai?utm_source=facebook&amp;utm_medium=shared_tnkupage" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fflurri.ai%2F%3Futm_source%3Dfacebook%26utm_medium%3Dshared_tnkupage&amp;src=sdkpreparse">Share</a>
+    </div>
+</div>
+
+</body>
+</html>

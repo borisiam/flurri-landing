@@ -1,0 +1,134 @@
+/* C L A S S E S =================================================================================*/
+
+h1, h2, h3 {
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+p {
+    font-family: PT Serif;
+    font-style: italic;
+}
+
+.mobile-fonts{}
+
+.mobile-fonts h2 {
+    font-size: 20px;
+}
+
+.mobile-fonts p {
+    font-size: 16px;
+    line-height: 1.25em;
+}
+
+.desktop-fonts {}
+
+.desktop-fonts h1 {
+    font-size: 60px;
+}
+
+.desktop-fonts h2 {
+    font-size: 30px;
+}
+
+.desktop-fonts p {
+    font-size: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-margins-high {}
+
+.text-margins-high h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.text-margins-high h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.text-margins-high h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.text-margins-high p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* I N S T A N C E S =================================================================================*/
+
+/* Mobile */
+
+#confirmation-thank-you-message-mobile {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    margin-top: 28%;
+}
+
+#confirmation-thank-you-message-mobile h1 {
+    color: #17cb79;
+}
+
+#logo-mobile {
+    width: 25%;
+}
+
+/* Desktop */
+
+#confirmation-thank-you-message-desktop {
+    background-color: white;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+    margin-top: 5%;
+}
+
+#confirmation-thank-you-message-desktop h1 {
+    color: #17cb79;
+}
+
+#logo-desktop {
+    width: 20%;
+}
+
+/* MEDIA RULES =================================================================================*/
+
+/* Mobile */
+
+@media only screen
+and (max-device-width : 999px)
+and (orientation : portrait)
+{
+    .desktop-media{
+        display: none;
+    }
+
+    .btn {
+        font-size: 25px;
+    }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1000px)
+{
+    .mobile-media{
+        display: none;
+    }
+
+    .btn {
+        font-size: 40px;
+    }
+
+}
+
+
+/* MEDIA RULES - END =================================================================================*/

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- ===URL==PARSER==+ -->
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var source = getParameterByName('utm_source');
+        var medium = getParameterByName('utm_medium');
+
+        $(document).ready(function()
+        {
+            document['mc-embedded-subscribe-form-desktop-h'].action = "//flurri.us15.list-manage.com/subscribe/post?u=0752c94bf0161919f7d4e5516&amp;id=8e0f023d12&DEVICE=Desktop-header" + "&SOURCE=" + source + "&CAMPAIGN=" +medium;
+
+            document['mc-embedded-subscribe-form-desktop'].action = "//flurri.us15.list-manage.com/subscribe/post?u=0752c94bf0161919f7d4e5516&amp;id=8e0f023d12&DEVICE=Desktop" + "&SOURCE=" + source + "&CAMPAIGN=" +medium;
+
+            document['mc-embedded-subscribe-form-m'].action = "//flurri.us15.list-manage.com/subscribe/post?u=0752c94bf0161919f7d4e5516&amp;id=8e0f023d12&DEVICE=Mobile" + "&SOURCE=" + source + "&CAMPAIGN=" +medium;
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+<!--MOBILE-->
+
+<!-- SICKY HEADER -->
+<button type="button" class="btn btn-success btn-lg" id="signup-btn-mobile" onclick="window.location.href='http://eepurl.com/cA2PPX';ga('send', 'event', 'clicky', 'click');">
+    Get the app first!
+</button>
+
+<!-- Begin MailChimp Signup Form -->
+
+<div id="mc_embed_signup-mobile">
+    <img src="img/astronaut.png" id="astronaut-mobile">
+    <h2>Be the first to explore!</h2>
+<div class="form-group" id="mc_embed_signup-form-mobile">
+    <form action="//flurri.us15.list-manage.com/subscribe/post?u=0752c94bf0161919f7d4e5516&amp;id=8e0f023d12&DEVICE=Mobiile" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form-m" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+
+            <div class="mc-field-group form-group row form-field-mobile">
+
+                <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email-Address*">
+
+            </div>
+            <div class="mc-field-group form-group row form-field-mobile">
+                <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME" placeholder="Name*">
+            </div>
+            <div class="mc-field-group input-group list-none">
+
+                <ul>
+                    <li><input type="checkbox" value="2" name="group[431][2]" id="mce-group[431]-431-1"><label for="mce-group[431]-431-1" class="label-margin">I want to participate in beta testing</label></li>
+                </ul>
+            </div>
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+ <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0752c94bf0161919f7d4e5516_8e0f023d12" tabindex="-1" value=""></div>
+ <div class="clear"><input type="submit" value="SIGN ME UP!" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg" onclick="ga('send', 'event', 'clicky', 'mobile-click');"></div>
+</div>
+</form>
+</div>
+
+
+</div>
+
+</body>
+</html>
+
+<!--DESKTOP-->
+
+<!-- STICKY HEADER -->
+<form action="//flurri.us15.list-manage.com/subscribe/post?u=0752c94bf0161919f7d4e5516&amp;id=8e0f023d12&DEVICE=Desktop-header" method="post" name="mc-embedded-subscribe-form-desktop-h" class="validate" target="_blank" novalidate>
+    <div class="col-sm-2 text-center beta-columns-navabar-desktop" id="beta-email-navbar-desktop">
+        <div class="input-navbar">
+            <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email Address*">
+        </div>
+    </div>
+    <div class="col-sm-2 text-center beta-columns-navabar-desktop" id="beta-name-navbar-desktop">
+        <div class="input-navbar">
+            <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME" placeholder="Name*">
+        </div>
+    </div>
+    <div class="col-sm-2 beta-columns-navabar-desktop" id="beta-submit-navbar-desktop">
+        <div class="input-navbar">
+            <div class="clear"><input type="submit" value="SIGN ME IN!" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success" onclick="ga('send', 'event', 'clicky', 'desktop-header-click');"></div>
+        </div>
+    </div>
+</form>
+
+<!-- Begin MailChimp Signup Form -->
+
+<div class="text-center" id="mc_embed_signup-desktop">
+    <img src="img/astronaut.png" id="astronaut-desktop">
+    <h3>Be the first to explore!</h3>
+<div class="form-group" id="mc_embed_signup-form-desktop">
+    <form action="//flurri.us15.list-manage.com/subscribe/post?u=0752c94bf0161919f7d4e5516&amp;id=8e0f023d12&DEVICE=Desktop" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form-desktop" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group form-group row">
+
+                <div class="text-center" id="beta-email-desktop">
+                    <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email Address*">
+                </div>
+            </div>
+            <div class="mc-field-group form-group row">
+
+                <div class="text-center" id="beta-name-desktop">
+                    <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME" placeholder="Name*">
+                </div>
+            </div>
+            <div class="mc-field-group input-group list-none center" id="checkboxes-desktop">
+                <ul>
+                    <li class="float-left"><input type="checkbox" value="2" name="group[431][2]" id="mce-group[431]-431-1"><label for="mce-group[431]-431-1" class="label-margin">I want to participate in beta testing</label></li>
+                </ul>
+            </div>
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0752c94bf0161919f7d4e5516_8e0f023d12" tabindex="-1" value=""></div>
+<div class="clear"><input type="submit" value="SIGN ME UP!" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg" onclick="ga('send', 'event', 'clicky', 'desktop-click');"></div>
+</div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
